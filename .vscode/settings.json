@@ -1,13 +1,7 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-  "eslint.validate": ["javascript"],
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": false,
-  "editor.formatOnType": false,
-  "editor.formatOnSaveMode": "file",
-  "files.autoSave": "off",
-  "javascript.preferences.importModuleSpecifierEnding": "js"
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "eslint.codeActionsOnSave.rules": ["!prefer-const", "*"]
 }
