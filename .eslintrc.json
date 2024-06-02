@@ -22,5 +22,17 @@
     ],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "import/extensions": ["error", "ignorePackages"]
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.js"
+      ],
+      "env": {
+        "jest": true 
+      },
+      "extends": ["plugin:jest/recommended"],
+      "plugins": ["jest"]
+    }
+  ]
 }
