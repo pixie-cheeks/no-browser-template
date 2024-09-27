@@ -2,14 +2,24 @@ module.exports = {
   env: {
     browser: false,
   },
+  overrides: [{ files: ['*.jsx', '*.js'] }],
   parserOptions: {
     ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  extends: ['airbnb-base', 'prettier'],
-  ignorePatterns: ['/*', '!/src'],
+  extends: ['airbnb-base', 'plugin:unicorn/recommended', 'prettier'],
+  ignorePatterns: ['*', '!src', '!src/**/*'],
   rules: {
     'no-unused-vars': 'warn',
     'no-console': 'off',
+    'unicorn/better-regex': 'warn',
+    'unicorn/numeric-separators-style': [
+      'error',
+      { number: { minimumDigits: 0 } },
+    ],
+    'no-plusplus': 'off',
+    'import/extensions': ['error', 'ignorePackages'],
+    'no-param-reassign': ['error', { props: false }],
 
     'lines-between-class-members': [
       'error',
@@ -21,8 +31,6 @@ module.exports = {
         ],
       },
     ],
-    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
-    'import/extensions': ['error', 'ignorePackages'],
   },
   overrides: [
     {
